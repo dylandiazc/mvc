@@ -5,6 +5,10 @@
  */
 package mvc;
 
+import mvc.controladores.Controlador;
+import mvc.modelos.Modelo;
+import mvc.vistas.Vistas;
+
 /**
  *
  * @author 57305
@@ -15,7 +19,12 @@ public class Mvc {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+      Vistas vista = new Vistas();
+      vista.setVisible(true);
+      Modelo modelo = new Modelo();
+      Controlador controlador = new Controlador(modelo, vista);
+        
     }
     
 }
